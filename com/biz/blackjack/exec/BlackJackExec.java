@@ -6,14 +6,10 @@ public class BlackJackExec {
 
 	public static void main(String[] args) {
 		BlackJackService bjs = new BlackJackService();
-		
-		
-		bjs.cardList();
-		bjs.scoreList();
+
+		bjs.dList();
+		bjs.pList();
 		bjs.shuffleDP();
-		bjs.game();
-		
-		
-		
+		bjs.gameStart();
 	}
 }
