@@ -7,9 +7,13 @@ public class BlackJackExec {
 	public static void main(String[] args) {
 		BlackJackService bjs = new BlackJackService();
 
-		bjs.dList();
-		bjs.pList();
+		
+		bjs.cardName();
 		bjs.shuffleDP();
+		bjs.accumulated();
 		bjs.gameStart();
+		bjs.seventeen();
+		bjs.tOne();
+		
 	}
 }
