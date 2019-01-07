@@ -32,7 +32,7 @@ public class AccVO {
 	}
 	@Override
 	public String toString() {
-		return "BlackJAckVO12345678910 [strAccD=" + strAccD + ", intAccD=" + intAccD + ", strAccP=" + strAccP
+		return "AccVO [strAccD=" + strAccD + ", intAccD=" + intAccD + ", strAccP=" + strAccP
 				+ ", intAccP=" + intAccP + "]";
 	}
 	

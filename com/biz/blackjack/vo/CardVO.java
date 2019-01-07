@@ -19,7 +19,7 @@ public class CardVO {
 	}
 	@Override
 	public String toString() {
-		return "CardVO12345678910 [strC=" + strC + ", intC=" + intC + "]";
+		return "CardVO [strC=" + strC + ", intC=" + intC + "]";
 	}	
 	
 	
