@@ -96,6 +96,16 @@ public class BlackJackService {
 
 		}
 		
+		/*
+		 * dealer           /           player
+		 * 카드1, 점수1
+		 * 								카드1, 점수
+		 * 카드12, 점수12
+		 * 								카드12, 점수12
+		 * 카드123, 점수123
+		 * 								카드123, 점수123
+		 */
+		
 	}
 
 	public void gameStart() {
@@ -104,6 +114,10 @@ public class BlackJackService {
 		 * acclist에서 각 2,3번째를 불러온다
 		 * 1을 입력하면 seventeen(); method로 이동
 		 * 그 외 값을 입력하면 1을 입력하도록 유도
+		 * 
+		 * 
+		 * 두 사람이 두장씩 뽑음
+		 * 딜러 합이 17미만이면 딜러가 한번 더 뽑고 점수 비교해서 승자를 가림
 		 */
 		System.out.println("귀하는 현재 딜러입니다.");
 		System.out.println("카드를 선택하고 뽑으려면 1을 눌러주세요");
@@ -153,7 +167,7 @@ public class BlackJackService {
 							aList.get(4).getIntAccD());
 
 					tOne();
-					return;
+					break ;
 				}
 				System.out.println("카드를 뽑으려면 2를 누르세요.");
 
@@ -184,13 +198,13 @@ public class BlackJackService {
 
 			if (intThird >= 17 && intThird <= 21) {
 				System.out.println("두 사람의 점수가 21점 이하이므로 카드를 계속해서 뽑습니다.");
-				System.out.printf("귀하와 플레이어의 카드는 각 %s, %d, %s, %d입니다.\n", aList.get(4).getStrAccD(),
+				System.out.printf("귀하와 플레이어의 카드는 각 %s, %d / %s, %d입니다.\n", aList.get(4).getStrAccD(),
 						aList.get(4).getIntAccD(), aList.get(5).getStrAccP(), aList.get(5).getIntAccP());
-				return;
+				break;
 			} else if (aList.get(5).getIntAccD() > 21 || aList.get(5).getIntAccP() > 21) {
 				System.out.printf("두 사람의 점수가 각 %d와 %d이므로 게임을 종료합니다.\n", aList.get(4).getIntAccD(),
 						aList.get(5).getIntAccP());
-				return;
+				break ;
 			}
 
 		}
